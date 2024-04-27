@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root{
+    background-image: url(https://kalix.club/uploads/posts/2022-12/1671511311_kalix-club-p-zvezda-smerti-oboi-krasivo-7.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+    color: white;
+    height: 100vh;
+
+}
+.logo_class{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: 800;
+    font-size: 80px;
+    text-transform: uppercase;
+    width: 500px;
+}
+
+.list{
+    background-color: rgba(245, 245, 245, 0);
+    font-size: 20px;
+    width: 28vw;
+    color: black;
+    border-radius: 8px;
+    height: 53vh;   
+    overflow: auto;
+}
+
+.list::-webkit-scrollbar {
+    width: 10px; 
+}
+
+.list::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1); 
+}
+
+.list::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3); 
+    border-radius: 5px; 
+}
+
+.item:hover{
+    color: gold;
+}
+.btns{
+    display: flex;
+}
+.btn{
+    border-radius: 4px;
+    background-color: black;
+    margin: 5px;
+    padding: 1px 8px;
+    color: #FFFFFF;
+    font-weight: 800;
+}
+.btn:hover{
+    background-color: gold;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    text-align:justify;
+    font-size: 25px;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+}
+.info-conatiner{
+    background-color: rgb(41, 73, 159);
+    border-radius: 8px; 
+    padding: 10px;
+}
+.li-dataitem{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.item{
+    color: white;
+    background-color: rgb(41, 73, 159);
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-size: 25px;
+    font-weight: 800;
+    
+}
+.link{
+    color: #FFFFFF;
+    transition: 0.4ms;
+    font-size: 30px;
+}
+
+img{
+    width: 100px;
+    height: auto;
+}
+.link:hover{
+    color: gold;
+    font-weight: 500;
+}
+
+.loading-animation {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #7986cb;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+.container{
+    width:auto;
+    margin-left: 50px;
+}
+
+.header__container{
+    display: flex;
+    justify-content: space-around;
+    margin-right: 20px;
+}
+
+.container-pages{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+
+@media (max-width: 780px) {
+    .container {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .header__container {
+      flex-direction: column;
+      align-items: center;
+      margin-right: 0;
+    }
+  
+    .list, .info {
+      width: 45%;
+      font-size: 15px;
+      max-width: none;
+    }
+
+    .item{
+        font-size: 15px;
+    }
+
+    .logo{
+        font-size: 40px; 
+        width: 100%;   
+    }
+    img{
+        width: 100px;
+    }
+  }
+  
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .header__container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    .item{
+        font-size: 20px;
+    }
+  
+    .list, .info {
+      width: calc(50% - 20px);
+      margin: 20px 0;
+      max-width: none;
+      font-size: 20px;
+    }
+
+    .container-pages{
+        margin-left: 0px;
+    }
+    a{
+        text-align: center;
+    }
+  }
+
+  @media (max-width: 479px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .header__container {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .logo {
+        font-size: 40px;
+        width: 100%; 
+    }
+
+    .item{
+        font-size: 10px;
+    }
+    .list,
+    .info {
+
+        max-width: none;
+        font-size: 13px;
+    }
+}
