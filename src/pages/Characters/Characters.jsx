@@ -24,7 +24,7 @@ const Characters = () => {
                 </div>
             )}
 
-            {localStorage.getItem('dataObj') !== null ? <DataCard data={cardData} /> : <></>}
+            {<DataCard data={cardData} />}
         </div>
     );
 }
